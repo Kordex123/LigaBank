@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
-}
+@import '../../sass/general.scss';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.header {
+  @extend .container;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  background-color: var(--basic-light-grey);
+  min-height: 48px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 69px;
   }
-  to {
-    transform: rotate(360deg);
+
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+    line-height: 19px;
+    min-height: 91px;
+  }
+}
+
+.header__menu {
+  display: flex;
+  order: 1;
+  align-items: center;
+}
+
+.header__nav {
+  width: 100%;
+  display: none;
+  order: 3;
+
+  &.expanded {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: unset;
+    display: block;
+    order: 2;
+  }
+}
+
+.header__nav--hidden {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.header__actions {
+  order: 2;
+
+  @media screen and (min-width: 768px) {
+    order: 3;
+  }
+}
+
+.header__logo-image {
+  width: 18px;
+  height: 17px;
+
+  @media screen and (min-width: 768px) {
+    width: 24px;
+    height: 22px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 28px;
+    height: 25px;
+  }
+}
+
+.header__logo {
+  width: 89px;
+  height: 11px;
+
+  @media screen and (min-width: 768px) {
+    width: 101px;
+    height: 13px;
+    margin-left: 8px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 112px;
+    height: 14px;
+    margin-left: 9px;
+  }
+}
+
+.header__nav-list a {
+  color: var(--basic-dark-grey);
+}
+
+.header__nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.header__login {
+  font-family: inherit;
+  display: flex;
+}
+
+.burger {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger__image {
+  width: 16px;
+  height: 10px;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  right: 28px;
+  display: none;
+  height: 32px;
+  width: 32px;
+
+  &.expanded {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.close__image {
+  width: 13px;
+  height: 13px;
+}
+
+.login {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &.expanded {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.login__image {
+  width: 14px;
+  height: 16px;
+
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 22px;
+  }
+}
+
+.login__description {
+  display: none;
+  color: var(--basic-dark-grey);
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 10px;
+  }
+}
+
+.site-list__item {
+  display: block;
+  line-height: 60px;
+  border-bottom: 1px solid var(--mobile-menu-line);
+
+  &:first-child {
+    border-top: 1px solid var(--mobile-menu-line);
+
+    @media screen and (min-width: 768px) {
+      border-top: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    border-bottom: none;
+  }
+}
+
+.site-list__link {
+  margin-left: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.site-list__item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 25px;
   }
 }
