@@ -1,3 +1,9 @@
+@import "node_modules/normalize.scss/normalize";
+@import "src/sass/variables";
+@import "src/sass/general";
+@import "src/sass/fonts";
+@import "src/components/Header/Header";
+
 .page {
   height: 100%;
 }
