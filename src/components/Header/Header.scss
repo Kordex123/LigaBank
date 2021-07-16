@@ -1,13 +1,14 @@
+@import '../../sass/variables.scss';
 @import '../../sass/general.scss';
 
 .header {
-  @extend .container;
+  @extend .container !optional;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--basic-light-grey);
+  background-color: $basic-light-grey;
   min-height: 48px;
 
   @media screen and (min-width: 768px) {
@@ -63,7 +64,7 @@
 
   &.expanded::after {
     content: '';
-    border-bottom: 1px solid var(--mobile-menu-line);
+    border-bottom: 1px solid $mobile-menu-line;
     display: block;
   }
 
@@ -106,7 +107,7 @@
 }
 
 .header__nav-list a {
-  color: var(--basic-dark-grey);
+  color: $basic-dark-grey;
 }
 
 .header__nav-list {
@@ -195,7 +196,7 @@
 
 .login__description {
   display: none;
-  color: var(--basic-dark-grey);
+  color: $basic-dark-grey;
   font-size: 16px;
   line-height: 19px;
   margin-left: 10px;
@@ -216,6 +217,7 @@
     &.expanded {
       display: block;
     }
+
     //font-size: 16px;
     //line-height: 19px;
     //margin-left: 10px;
@@ -237,12 +239,12 @@
 
   &::after {
     content: '';
-    border-bottom: 1px solid var(--mobile-menu-line);
+    border-bottom: 1px solid $mobile-menu-line;
   }
 
   &:first-child::before {
     content: '';
-    border-top: 1px solid var(--mobile-menu-line);
+    border-top: 1px solid $mobile-menu-line;
 
     @media screen and (min-width: 768px) {
       border-top: none;

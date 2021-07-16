@@ -1,51 +1,3 @@
-:root {
-  --basic-dark-grey: #1f1e25;
-  --basic-light-grey: #f6f7ff;
-  --mobile-menu-line: #c1c2ca;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-  src:
-    local(''),
-    url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/roboto-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/roboto-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/roboto-v27-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-  src:
-    local(''),
-    url('../fonts/roboto-v27-latin-500.woff2') format('woff2'),
-    url('../fonts/roboto-v27-latin-500.woff') format('woff'),
-    url('../fonts/roboto-v27-latin-500.ttf') format('truetype'),
-    url('../fonts/roboto-v27-latin-500.svg#Roboto') format('svg');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-  src:
-    local(''),
-    url('../fonts/roboto-v27-latin-700.woff2') format('woff2'),
-    url('../fonts/roboto-v27-latin-700.woff') format('woff'),
-    url('../fonts/roboto-v27-latin-700.ttf') format('truetype'),
-    url('../fonts/roboto-v27-latin-700.svg#Roboto') format('svg');
-}
-
 body {
   min-width: 320px;
   max-width: 1366px;
@@ -58,9 +10,6 @@ body {
   letter-spacing: normal;
   color: var(--basic-dark-grey);
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 a {
@@ -94,5 +43,33 @@ img {
 
   @media screen and (min-width: 1024px) {
     padding: 0 98px;
+  }
+}
+
+.button {
+  display: flex;
+  border: none;
+  outline: none;
+  height: 43px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+
+  &--dark {
+    background-color: $special-dark-blue;
+    color: $basic-light-grey;
+  }
+
+  &--light {
+    background-color: $basic-light-grey;
+    color: $basic-dark-grey;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 48px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 53px;
   }
 }
