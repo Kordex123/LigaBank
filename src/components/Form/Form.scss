@@ -1,0 +1,168 @@
+@import '../../sass/variables.scss';
+
+.form {
+  @media screen and (min-width: 1024px) {
+    background-color: $basic-light-grey;
+    margin: 0 auto;
+    margin-top: 57px;
+    padding: 0 35px;
+    padding-bottom: 65px;
+  }
+}
+
+.form-title {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 63px;
+    font-size: 22px;
+    line-height: 31px;
+    letter-spacing: -0.03em;
+    margin-bottom: 6px;
+  }
+}
+
+.form__item {
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border: 1px solid $special-underline;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin: 0;
+    margin-bottom: -17px;
+
+    &::after {
+      bottom: 10px;
+    }
+  }
+}
+
+.form__value {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  height: 72px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    line-height: 31px;
+    text-align: right;
+    width: fit-content;
+    order: 2;
+  }
+}
+
+.form__text {
+  color: $grey-subtitle;
+  //display: flex;
+  //flex-wrap: nowrap;
+
+  @media screen and (min-width: 768px) {
+    order: 1;
+  }
+
+  @media screen and (min-width: 1024px) {
+    letter-spacing: 0.02em;
+  }
+}
+
+.form__subsection {
+  padding: 0;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    &--person {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 92%;
+    margin: 0 auto;
+
+    &--person {
+      margin-top: 4px;
+    }
+  }
+}
+
+.form__submit {
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media screen and (min-width: 768px) {
+    height: 51px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 38px;
+  }
+}
+
+.form__person-item {
+  //display: flex;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    margin: 0;
+
+    &--full-name {
+      width: 100%;
+    }
+
+    &--phone {
+      width: 48%;
+    }
+
+    &--email {
+      width: 48%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin: 0;
+    margin-top: 34px;
+  }
+}
+
+.form__person-value {
+  background-color: transparent;
+}

@@ -1,5 +1,4 @@
 @import '../../sass/variables.scss';
-@import '../../sass/general.scss';
 
 .header {
   @extend .container !optional;
@@ -57,6 +56,7 @@
 
 .header__actions {
   order: 4;
+  //margin-left: calc((100% - 855px) * 0.4);
 
   &.expanded {
     width: 100%;
@@ -68,9 +68,9 @@
     display: block;
   }
 
-  //@media screen and (min-width: 768px) {
-  //  order: 3;
-  //}
+  @media screen and (min-width: 1024px) {
+    margin-left: calc((100% - 855px) * 0.4);
+  }
 }
 
 .header__logo-image {
@@ -217,10 +217,6 @@
     &.expanded {
       display: block;
     }
-
-    //font-size: 16px;
-    //line-height: 19px;
-    //margin-left: 10px;
   }
 }
 

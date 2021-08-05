@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+import { ActionType } from '../Login/LoginReducer';
 import withExpanded from '../../hocs/withExpanded';
 
-const Header = ({ expanded, onExpandedChange }) => {
+const Header = ({ expanded, onExpandedChange, showLogin }) => {
   const expandedClass = expanded ? 'expanded' : '';
   return (
     <header className="header">
@@ -20,29 +22,29 @@ const Header = ({ expanded, onExpandedChange }) => {
       <nav className={`header__nav ${expandedClass}`}>
         <ul className="header__nav-list site-list">
           <li className="site-list__item">
-            <Link className="site-list__link" to="services">
+            <Link className="site-list__link" to="#services">
               Услуги
             </Link>
           </li>
           <li className="site-list__item">
-            <Link className="site-list__link" to="credit">
+            <Link className="site-list__link" to="#credit">
               Рассчитать кредит
             </Link>
           </li>
           <li className="site-list__item">
-            <Link className="site-list__link" to="currency-converter">
+            <Link className="site-list__link" to="#currency-converter">
               Конвертер валют
             </Link>
           </li>
           <li className="site-list__item">
-            <Link className="site-list__link" to="contacts">
+            <Link className="site-list__link" to="#branch">
               Контакты
             </Link>
           </li>
         </ul>
       </nav>
       <div className={`header__actions ${expandedClass}`}>
-        <button className={`header__login login ${expandedClass}`} type="button">
+        <button className={`header__login login ${expandedClass}`} type="button" onClick={showLogin}>
           <svg
             className={`login__image ${expandedClass}`}
             width="14"
@@ -68,9 +70,18 @@ const Header = ({ expanded, onExpandedChange }) => {
   );
 };
 
+const mapDispatchToProps = (dispatch) => ({
+  showLogin: () => {
+    dispatch({
+      type: ActionType.SHOW_LOGIN,
+    });
+  },
+});
+
 Header.propTypes = {
   expanded: PropTypes.bool.isRequired,
   onExpandedChange: PropTypes.func.isRequired,
+  showLogin: PropTypes.func.isRequired,
 };
 
-export default withExpanded(Header);
+export default withExpanded(connect(null, mapDispatchToProps)(Header));

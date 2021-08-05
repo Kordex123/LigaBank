@@ -1,0 +1,78 @@
+@import '../../sass/variables.scss';
+
+.services {
+  @media screen and (min-width: 1024px) {
+    margin-top: 53px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 98px;
+    padding-right: 98px;
+  }
+}
+
+.services__tab-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.services__tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  text-align: center;
+  padding: 30px 0;
+  color: $tab-grey-inactive;
+
+  &--deposit::before {
+    content: '';
+    display: block;
+    background-image: url('../../assets/img/services/deposits-icon.svg');
+    background-size: 34px 33px;
+    width: 34px;
+    height: 33px;
+    margin-right: 10px;
+  }
+
+  &--credit::before {
+    content: '';
+    display: block;
+    background-image: url('../../assets/img/services/credits-icon.svg');
+    background-size: 34px 30px;
+    width: 34px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  &--insurance::before {
+    content: '';
+    display: block;
+    background-image: url('../../assets/img/services/insurance-icon.svg');
+    background-size: 28px 34px;
+    width: 28px;
+    height: 34px;
+    margin-right: 10px;
+  }
+
+  &--online-service::before {
+    content: '';
+    display: block;
+    background-image: url('../../assets/img/services/online-services-icon.svg');
+    background-size: 20px 34px;
+    width: 20px;
+    height: 34px;
+    margin-right: 10px;
+  }
+}
+
+.react-tabs__tab--selected {
+  background-color: $basic-light-grey;
+  color: $basic-dark-grey;
+}
