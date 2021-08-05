@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: normal;
-  color: var(--basic-dark-grey);
+  color: $basic-dark-grey;
   min-height: 100%;
 }
 
@@ -35,14 +35,17 @@ img {
 }
 
 .container {
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   @media screen and (min-width: 768px) {
-    padding: 0 45px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   @media screen and (min-width: 1024px) {
-    padding: 0 98px;
+    padding-left: calc(45px + 3.88%);
+    padding-right: calc(45px + 3.88%);
   }
 }
 
@@ -72,4 +75,16 @@ img {
   @media screen and (min-width: 1024px) {
     height: 53px;
   }
+}
+
+.frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 59px;
+  border: 1px solid $basic-dark-grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
 }

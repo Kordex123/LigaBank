@@ -1,7 +1,7 @@
 @import '../../sass/variables.scss';
 @import '../../sass/general.scss';
 
-.promo-slider {
+.promo-slide {
   height: 226px;
   background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027b3 99.79%);
 
@@ -14,7 +14,7 @@
   }
 }
 
-.promo-slider__title {
+.promo-slide__title {
   font-family: inherit;
   font-weight: 700;
   font-size: 38px;
@@ -41,7 +41,7 @@
   }
 }
 
-.promo-slider__text {
+.promo-slide__text {
   line-height: 19px;
   margin-top: 6px;
   margin-bottom: 0;
@@ -80,13 +80,12 @@
   }
 }
 
-.promo-slider__link {
+.promo-slide__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   width: 188px;
   margin-top: 25px;
-  letter-spacing: 0.1em;
 
   &--credit {
     @extend .button--light;
@@ -104,6 +103,7 @@
     line-height: 19px;
     width: 206px;
     margin-top: 31px;
+    letter-spacing: 0.05em;
   }
 
   @media screen and (min-width: 1024px) {
@@ -115,7 +115,7 @@
   }
 }
 
-.promo-slider__wrapper {
+.promo-slide__wrapper {
   position: absolute;
   z-index: 1;
 
@@ -128,11 +128,11 @@
   }
 }
 
-.promo-slider__image-container {
+.promo-slide__image-container {
   position: relative;
 }
 
-.promo-slider__image {
+.promo-slide__image {
   width: 100%;
   height: 226px;
 
@@ -147,4 +147,18 @@
 
 .slick-dots {
   bottom: 15px;
+
+  li button::before {
+    color: $slider-dots-blue;
+    opacity: 1;
+  }
+
+  li.slick-active button::before {
+    color: $slider-dots-darken-grey;
+    opacity: 1;
+  }
+}
+
+.promo-slider li:not(:last-child).slick-active button::before {
+  color: $basic-light-grey;
 }
