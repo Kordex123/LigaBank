@@ -1,0 +1,14 @@
+@import '../../sass/variables.scss';
+
+.credit-type .react-select__menu {
+  margin: 0;
+  position: static;
+
+  & .react-select__menu-list {
+    padding: 0;
+  }
+}
+
+.react-select__indicator-separator {
+  display: none;
+}

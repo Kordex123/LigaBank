@@ -4,7 +4,7 @@ import './index.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
-import App from './components/App/App';
+import App from './components/app/app';
 import reducer from './reducers';
 
 const init = () => {
