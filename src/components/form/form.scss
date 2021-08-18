@@ -1,0 +1,199 @@
+@import '../../sass/variables.scss';
+
+.form {
+  margin-top: 42px;
+
+  @media screen and (min-width: $tablet-min) {
+    margin-top: 52px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    background-color: $basic-light-grey;
+    margin: 0 auto;
+    margin-top: 57px;
+    padding: 0 35px;
+    padding-bottom: 65px;
+  }
+}
+
+.form-title {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-top: 63px;
+    font-size: 22px;
+    line-height: 31px;
+    letter-spacing: -0.03em;
+    margin-bottom: 6px;
+  }
+}
+
+.form__item {
+  margin-top: 10px;
+  margin-bottom: -18px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border: 1px solid $special-underline;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 7px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin: 0;
+    margin-bottom: -17px;
+
+    &::after {
+      bottom: 10px;
+    }
+  }
+}
+
+.form__value {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  height: 72px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 22px;
+    line-height: 31px;
+    text-align: right;
+    width: fit-content;
+    order: 2;
+  }
+}
+
+.form__text {
+  color: $grey-subtitle;
+  display: block;
+  margin-top: -23px;
+  margin-bottom: 11px;
+  letter-spacing: 0.01em;
+
+  @media screen and (min-width: $tablet-min) {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    letter-spacing: 0.02em;
+  }
+}
+
+.form__subsection {
+  padding: 0;
+  border: none;
+
+  &--person {
+    margin-top: 32px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    &--person {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 42px;
+    }
+
+    &--credit-terms {
+      margin-top: 18px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 92%;
+    margin: 0 auto;
+
+    &--person {
+      margin-top: 4px;
+    }
+
+    &--credit-terms {
+      margin-top: 0;
+    }
+  }
+}
+
+.form__submit {
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 15px;
+  height: 51px;
+
+  @media screen and (min-width: $tablet-min) {
+    height: 51px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 38px;
+  }
+}
+
+.form__person-item {
+  margin-top: 20px;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 30px;
+
+    &--full-name {
+      width: 100%;
+    }
+
+    &--phone {
+      width: 48%;
+    }
+
+    &--email {
+      width: 48%;
+    }
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin: 0;
+    margin-top: 34px;
+  }
+}
+
+.form__person-value {
+  background-color: transparent;
+}
